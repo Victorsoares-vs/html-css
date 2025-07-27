@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+        div>p {
+            display: none;
+        }
+
+        div:hover>p {
+            display: block;
+            color: green;
+            background-color: lightcoral;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Teste de div</h1>
+    <p>Passe o mouse sobre as caixas</p>
+    <div>
+        01
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <div>
+        02
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <div>
+        03
+        <P>TEXTO ESCONDIDO</P>
+    </div>
+    <p>EXEMPLO DE DIVS</p>
+
+
+</body>
+
+</html>

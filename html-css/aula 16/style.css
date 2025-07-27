@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(244, 252, 139);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+
+}
+
+h1 {
+    color: maroon;
+    background-color: darkgoldenrod;
+}
+
+h2 {
+    color: darkred;
+}
+
+p {
+    text-align: center;
+}

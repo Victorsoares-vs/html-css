@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality</title>
+    <h1>Verificador de nacionalidade</h1> <!-- esse é o cabeçalho do documento-->
+    Olá! seja bem vindo ao nosso identificador de Nacionalidade!<br/> <!--pode digitar o que der na telha no conteúdo aqui -->
+    Esta ferramenta vai te informar se você tem de fato o pátrio tupiniquim, ou se você não foi abençoado com este dom.<br/>
+    <p>Tudo pronto? Vamos lá!</p><br/> 
+    País de nascimento: <input type="text" name="txtnat" id="txtnat"><!--aqui é aonde você 
+    coloca a caixa de texto e os botões necessários-->
+    <input type="button" value="Analisar" onclick="informar()"> <!--Cada botão PRECISA ter a ação dele, 
+    e conectar essa ação com o nome da função que você vai criar! -->
+    <div id="res"><!--A div é a linha aonde exibirá os resultados de resposta-->
+    </div>
+
+</head>
+<body>
+<script>//primeira coisa: crie o script//
+    function informar() { //agora sim, crie a função. lembre do nome que você atribuiu aos 
+    //botões dela (veja acima).//
+        let lugar = window.document.getElementById('txtnat') //CRIE AS VAR. As var que você vai criar, conecte com
+        //as informações que você vai querer.// 
+        let res = window.document.getElementById('res') //Tem que criar var pra 'div' também.
+        let pais = (txtnat.value) // quando quiser puxar o valor de algo pra var, use o '.value'
+        //se for valor numérico, utilize o 'Number' na frente do '.value' 
+        res.innerHTML = `Você nasceu em ${pais}.`//sempre que puxar texto pra uma div, use o '.inner'
+        //faça atribuições com placeholders '${}' das vars que você quer  
+        if(pais == 'Brasil' || pais == 'brasil') { //coloque os parâmetros de igual, maior que, diferente etc.
+            res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>` //NÃO ESQUECE do '+' antes do '=',
+            //senão ele vai comer o resultado, ao invés de adicionar! 
+        } else if(pais == 'EUA' || pais == 'Estados Unidos') {
+            res.innerHTML += `<p>Você é <strong>Americano!</strong></p>`
+        } else {
+            res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+        } // dê glória a Deus cada vez que funcionar \o/
+        
+    }
+     
+</script>
+    
+</body>
+</html>
